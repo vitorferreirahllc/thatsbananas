@@ -19,20 +19,19 @@ export default function Header() {
       <div className="container-site flex items-center justify-between py-5">
         <Logo />
 
-        {/* Desktop nav */}
-        <nav className="hidden items-center gap-7 lg:flex">
+        {/* Desktop nav — white pill (Google-style) for contrast over the hero photo */}
+        <nav className="hidden items-center gap-1 rounded-full bg-white px-2 py-2 shadow-md ring-1 ring-black/5 lg:flex">
           {navLinks.map((link, i) => (
             <a
               key={link.label}
               href={link.href}
-              className={`relative text-xs font-semibold uppercase tracking-[0.14em] text-brand transition-colors hover:text-orange ${
-                i === 0 ? "text-orange" : ""
+              className={`rounded-full px-3.5 py-2 text-xs font-semibold uppercase tracking-[0.14em] transition-colors ${
+                i === 0
+                  ? "bg-cream text-orange"
+                  : "text-brand hover:bg-cream hover:text-orange"
               }`}
             >
               {link.label}
-              {i === 0 && (
-                <span className="absolute -bottom-1.5 left-0 h-0.5 w-full rounded-full bg-orange" />
-              )}
             </a>
           ))}
         </nav>
