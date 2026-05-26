@@ -35,7 +35,7 @@ export const favorites: MenuItem[] = [
   {
     name: "Pulled Pork",
     price: "$9.50", // TODO: confirmar preço do Pulled Pork
-    image: "/images/favorites/pulled-pork.jpg",
+    image: "/images/favorites/pulled-pork.png",
   },
 ];
 
