@@ -28,7 +28,6 @@ export default function CircularBadge({
           />
         </defs>
         <circle cx="60" cy="60" r="58" fill="#f2871f" />
-        <circle cx="60" cy="60" r="49" fill="none" stroke="#fff" strokeWidth="1.5" />
         <text
           fill="#fff"
           fontSize="11"

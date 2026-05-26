@@ -39,6 +39,8 @@ export default function Locations() {
           <Reveal variant="fadeIn">
             <ImagePlaceholder
               label="Storefront photo"
+              src="/images/storefront.jpg"
+              alt="That's Bananas storefront"
               className="aspect-[4/3] w-full rounded-2xl shadow-md"
               rounded="rounded-2xl"
             />

@@ -56,13 +56,16 @@ export const location = {
 export type SocialLink = {
   label: string;
   href: string;
-  icon: "instagram" | "facebook" | "tiktok";
+  icon: "instagram" | "facebook";
 };
 
 export const socials: SocialLink[] = [
-  { label: "Instagram", href: "#", icon: "instagram" },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/thatsbananas_ott/",
+    icon: "instagram",
+  },
   { label: "Facebook", href: "#", icon: "facebook" },
-  { label: "TikTok", href: "#", icon: "tiktok" },
 ];
 
 export const footerColumns: { title: string; links: NavLink[] }[] = [

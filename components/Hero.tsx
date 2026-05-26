@@ -55,6 +55,8 @@ export default function Hero() {
             <div className="relative lg:h-full lg:min-h-[38rem]">
               <ImagePlaceholder
                 label="Hero photo"
+                src="/images/hero.jpg"
+                alt="That's Bananas café — yellow cup of coffee with pão de queijo"
                 priority
                 className="aspect-[4/3] w-full rounded-[2rem] shadow-xl lg:absolute lg:inset-0 lg:aspect-auto lg:h-full lg:rounded-none lg:rounded-tl-[3rem] lg:rounded-bl-[7rem] lg:shadow-none"
                 rounded="rounded-[2rem]"

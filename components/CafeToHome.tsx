@@ -84,6 +84,8 @@ export default function CafeToHome() {
           <Reveal variant="fadeIn">
             <ImagePlaceholder
               label="Café interior"
+              src="/images/interior.jpg"
+              alt="That's Bananas café interior"
               className="aspect-[4/3] w-full rounded-[2rem] shadow-lg lg:aspect-[3/4] lg:rounded-l-[3rem] lg:rounded-r-none lg:shadow-none"
               rounded="rounded-[2rem]"
             />
