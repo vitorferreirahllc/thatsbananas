@@ -1,20 +1,20 @@
 import ImagePlaceholder from "./ui/ImagePlaceholder";
 import CircularBadge from "./ui/CircularBadge";
 import Reveal from "./ui/Reveal";
-import { LeafBranch, Blob, Wave, Dots } from "./ui/Decorations";
+import { LeafBranch, Wave, Dots } from "./ui/Decorations";
 import { PinIcon } from "./ui/Icons";
 
 export default function Hero() {
   return (
     <section id="home" className="relative overflow-hidden bg-cream">
-      {/* Decorative accents */}
+      {/* Decorative leaf bottom-left */}
       <LeafBranch className="pointer-events-none absolute bottom-6 left-2 z-10 h-28 w-24 text-brand/15 sm:left-6" />
 
       <div className="grid items-center lg:grid-cols-2">
         {/* Left — copy (aligned to the site container) */}
         <div className="relative z-10 px-5 pt-28 pb-10 sm:px-8 lg:py-32 lg:pr-12 lg:pl-[max(2rem,calc((100vw-1200px)/2))]">
           <div className="relative max-w-xl">
-            <Dots className="pointer-events-none absolute -right-2 -top-10 h-16 w-16 text-gold/60 sm:right-10 lg:-right-4" />
+            <Dots className="pointer-events-none absolute -right-2 -top-8 h-16 w-16 text-orange/70 sm:right-10 lg:-right-4" />
 
             <Reveal immediate>
               <h1 className="font-display text-5xl font-bold leading-[1.05] text-brand sm:text-6xl">
@@ -22,7 +22,7 @@ export default function Hero() {
                 <br />
                 great food,
                 <br />
-                <span className="font-script text-6xl font-bold text-gold sm:text-7xl">
+                <span className="font-script text-6xl font-bold text-orange sm:text-7xl">
                   no passport
                   <br />
                   required.
@@ -31,7 +31,7 @@ export default function Hero() {
             </Reveal>
 
             <Reveal immediate delay={0.15} className="mt-6">
-              <span className="block h-1 w-12 rounded-full bg-gold" />
+              <span className="block h-1 w-12 rounded-full bg-orange" />
             </Reveal>
 
             <Reveal immediate delay={0.25} className="mt-5">
@@ -62,10 +62,11 @@ export default function Hero() {
             </div>
           </Reveal>
 
-          {/* Overlapping accents */}
-          <Wave className="pointer-events-none absolute -left-6 top-1/2 z-20 hidden h-40 w-40 -translate-y-1/2 text-brand-600 lg:block" />
-          <CircularBadge className="absolute -left-2 bottom-4 z-20 h-28 w-28 drop-shadow-lg sm:left-2 sm:h-32 sm:w-32 lg:-left-14 lg:bottom-16" />
-          <Blob className="pointer-events-none absolute -bottom-6 left-1/3 z-0 h-36 w-36 text-gold/40 lg:left-10" />
+          {/* Teal organic blob overlapping the left edge of the photo */}
+          <Wave className="pointer-events-none absolute -left-3 top-1/2 z-20 h-52 w-44 -translate-y-1/2 text-brand sm:-left-4 sm:h-60 sm:w-48 lg:-left-16 lg:h-72 lg:w-56" />
+
+          {/* Orange "GOOD MOOD" badge sitting on the wave */}
+          <CircularBadge className="absolute left-1/2 top-1/2 z-30 h-32 w-32 -translate-x-1/2 -translate-y-1/2 drop-shadow-lg sm:h-36 sm:w-36 lg:left-auto lg:-translate-x-0 lg:-left-4 lg:top-[52%]" />
         </div>
       </div>
     </section>

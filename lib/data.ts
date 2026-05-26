@@ -84,7 +84,8 @@ export const footerColumns: { title: string; links: NavLink[] }[] = [
   },
 ];
 
-/** External links — replace with the real ordering / directions URLs. */
+/** External links. */
 export const externalLinks = {
-  orderNow: "#",
+  orderNow: "https://beacons.ai/thatsbananas",
+  menu: "https://beacons.ai/thatsbananas",
 };

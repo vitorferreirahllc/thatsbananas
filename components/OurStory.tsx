@@ -55,6 +55,8 @@ export default function OurStory() {
           <Reveal variant="fadeIn">
             <ImagePlaceholder
               label="Family photo"
+              src="/images/family.jpg"
+              alt="That's Bananas family: Beatriz, Patricia, Flávia and team"
               className="aspect-[5/4] w-full rounded-[2rem] shadow-xl lg:aspect-[16/11] lg:rounded-l-[5rem] lg:rounded-r-none lg:shadow-none"
               rounded="rounded-[2rem]"
             />

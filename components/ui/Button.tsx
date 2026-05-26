@@ -10,6 +10,8 @@ type ButtonProps = {
   variant?: Variant;
   className?: string;
   ariaLabel?: string;
+  /** Override the default target. External URLs default to "_blank". */
+  target?: string;
 };
 
 const base =
@@ -21,16 +23,25 @@ const variants: Record<Variant, string> = {
   outline: "border-2 border-brand text-brand hover:bg-brand hover:text-cream",
 };
 
+const isExternal = (href: string) => /^https?:\/\//i.test(href);
+
 export default function Button({
   children,
   href = "#",
   variant = "primary",
   className = "",
   ariaLabel,
+  target,
 }: ButtonProps) {
+  const external = isExternal(href);
+  const resolvedTarget = target ?? (external ? "_blank" : undefined);
+  const rel = resolvedTarget === "_blank" ? "noopener noreferrer" : undefined;
+
   return (
     <motion.a
       href={href}
+      target={resolvedTarget}
+      rel={rel}
       aria-label={ariaLabel}
       whileHover={{ y: -2, scale: 1.03 }}
       whileTap={{ scale: 0.97 }}

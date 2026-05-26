@@ -2,7 +2,7 @@ import Button from "./ui/Button";
 import Reveal from "./ui/Reveal";
 import FavoritesCarousel from "./ui/FavoritesCarousel";
 import { LeafBranch } from "./ui/Decorations";
-import { favorites } from "@/lib/data";
+import { favorites, externalLinks } from "@/lib/data";
 
 function Sparkle({ className }: { className?: string }) {
   return (
@@ -31,7 +31,11 @@ export default function Favorites() {
         </div>
 
         <Reveal delay={0.1} className="mt-12 flex justify-center">
-          <Button href="#menu" variant="primary" className="px-8 py-3.5 text-sm">
+          <Button
+            href={externalLinks.menu}
+            variant="primary"
+            className="px-8 py-3.5 text-sm"
+          >
             View Full Menu
           </Button>
         </Reveal>

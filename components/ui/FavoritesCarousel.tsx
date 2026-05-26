@@ -92,6 +92,8 @@ export default function FavoritesCarousel({ items }: { items: MenuItem[] }) {
               >
                 <ImagePlaceholder
                   label={item.name}
+                  src={item.image}
+                  alt={item.name}
                   className="aspect-square w-full"
                   rounded="rounded-2xl"
                 />

@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 type ImagePlaceholderProps = {
@@ -14,8 +17,11 @@ type ImagePlaceholderProps = {
 };
 
 /**
- * Image slot kept intentionally blank until real assets arrive.
- * Pass `src` (a path under /public) to swap the placeholder for a real photo.
+ * Image slot. If `src` is provided AND the file loads, renders the photo;
+ * otherwise falls back to a soft labelled placeholder. This means you can
+ * reference image paths in code before the files exist on disk — the slot
+ * stays clean until you drop the assets in /public, and switches to the
+ * real photo automatically on next load.
  */
 export default function ImagePlaceholder({
   label = "Image",
@@ -26,19 +32,23 @@ export default function ImagePlaceholder({
   priority = false,
   objectPosition = "center",
 }: ImagePlaceholderProps) {
+  const [errored, setErrored] = useState(false);
+  const showImage = Boolean(src) && !errored;
+
   return (
     <div
       className={`relative overflow-hidden bg-cream-deep ${rounded} ${className}`}
     >
-      {src ? (
+      {showImage && src ? (
         <Image
           src={src}
-          alt={alt}
+          alt={alt || label}
           fill
           priority={priority}
           sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover"
           style={{ objectPosition }}
+          onError={() => setErrored(true)}
         />
       ) : (
         <span className="absolute inset-0 flex items-center justify-center gap-2 text-[0.7rem] font-medium uppercase tracking-[0.18em] text-brand/35">

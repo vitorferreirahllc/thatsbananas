@@ -13,7 +13,7 @@ export default function CircularBadge({
   className = "",
 }: CircularBadgeProps) {
   return (
-    <div className={`relative ${className}`}>
+    <div className={className} style={{ position: className?.includes("absolute") ? undefined : "relative" }}>
       <motion.svg
         viewBox="0 0 120 120"
         className="h-full w-full"
