@@ -80,7 +80,10 @@ export const footerColumns: { title: string; links: NavLink[] }[] = [
   {
     title: "More",
     links: [
-      { label: "Catering", href: "#catering" },
+      {
+        label: "Catering",
+        href: "https://thatsbananas.my.canva.site/contact",
+      },
       { label: "Locations", href: "#locations" },
       { label: "Contact", href: "#contact" },
     ],

@@ -34,15 +34,20 @@ export default function Footer() {
         {/* Link columns */}
         {footerColumns.map((col) => (
           <nav key={col.title} className="flex flex-col gap-3">
-            {col.links.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-sm font-medium uppercase tracking-[0.12em] text-cream/80 transition-colors hover:text-gold"
-              >
-                {link.label}
-              </a>
-            ))}
+            {col.links.map((link) => {
+              const external = /^https?:\/\//i.test(link.href);
+              return (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noopener noreferrer" : undefined}
+                  className="text-sm font-medium uppercase tracking-[0.12em] text-cream/80 transition-colors hover:text-gold"
+                >
+                  {link.label}
+                </a>
+              );
+            })}
           </nav>
         ))}
 
