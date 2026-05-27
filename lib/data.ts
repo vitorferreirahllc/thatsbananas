@@ -7,7 +7,7 @@ export const navLinks: NavLink[] = [
   { label: "Home", href: "#home" },
   { label: "About Us", href: "#about" },
   { label: "Menu", href: "#menu" },
-  { label: "Catering", href: "#catering" },
+  { label: "Catering", href: "https://thatsbananas.my.canva.site/contact" },
   { label: "Locations", href: "#locations" },
   { label: "Contact", href: "#contact" },
 ];
@@ -22,19 +22,19 @@ export type MenuItem = {
 export const favorites: MenuItem[] = [
   {
     name: "Churrasco",
-    price: "$7.95",
+    price: "$35",
     image: "/images/favorites/churrasco.jpg",
   },
-  { name: "Feijoada", price: "$4.75", image: "/images/favorites/feijoada.jpg" },
+  { name: "Feijoada", price: "$25", image: "/images/favorites/feijoada.jpg" },
   {
     name: "Pão de Queijo",
-    price: "$3.25",
+    price: "$6.99",
     image: "/images/favorites/pao-de-queijo.jpg",
   },
-  { name: "Coxinha", price: "$8.95", image: "/images/favorites/coxinha.jpg" },
+  { name: "Coxinha", price: "$6.99", image: "/images/favorites/coxinha.jpg" },
   {
     name: "Pulled Pork",
-    price: "$9.50", // TODO: confirmar preço do Pulled Pork
+    price: "$14.99",
     image: "/images/favorites/pulled-pork.png",
   },
 ];
@@ -91,4 +91,5 @@ export const footerColumns: { title: string; links: NavLink[] }[] = [
 export const externalLinks = {
   orderNow: "https://beacons.ai/thatsbananas",
   menu: "https://beacons.ai/thatsbananas",
+  catering: "https://thatsbananas.my.canva.site/contact",
 };

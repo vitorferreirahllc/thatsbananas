@@ -43,6 +43,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_CA",
   },
+  icons: {
+    // Adapt the favicon to the browser's color-scheme preference.
+    icon: [
+      {
+        url: "/favicon-light.png",
+        type: "image/png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/favicon-dark.png",
+        type: "image/png",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+    // Fallback for browsers that ignore the media attribute.
+    shortcut: "/favicon-light.png",
+    apple: "/favicon-light.png",
+  },
 };
 
 export default function RootLayout({

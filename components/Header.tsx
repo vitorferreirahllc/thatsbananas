@@ -21,19 +21,24 @@ export default function Header() {
 
         {/* Desktop nav — white pill (Google-style) for contrast over the hero photo */}
         <nav className="hidden items-center gap-1 rounded-full bg-white px-2 py-2 shadow-md ring-1 ring-black/5 lg:flex">
-          {navLinks.map((link, i) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className={`rounded-full px-3.5 py-2 text-xs font-semibold uppercase tracking-[0.14em] transition-colors ${
-                i === 0
-                  ? "bg-cream text-orange"
-                  : "text-brand hover:bg-cream hover:text-orange"
-              }`}
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link, i) => {
+            const external = /^https?:\/\//i.test(link.href);
+            return (
+              <a
+                key={link.label}
+                href={link.href}
+                target={external ? "_blank" : undefined}
+                rel={external ? "noopener noreferrer" : undefined}
+                className={`rounded-full px-3.5 py-2 text-xs font-semibold uppercase tracking-[0.14em] transition-colors ${
+                  i === 0
+                    ? "bg-cream text-orange"
+                    : "text-brand hover:bg-cream hover:text-orange"
+                }`}
+              >
+                {link.label}
+              </a>
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-3">
@@ -87,18 +92,23 @@ export default function Header() {
             className="overflow-hidden bg-cream shadow-lg lg:hidden"
           >
             <div className="container-site flex flex-col gap-1 pb-5 pt-2">
-              {navLinks.map((link, i) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className={`rounded-xl px-4 py-3 text-sm font-semibold uppercase tracking-[0.14em] ${
-                    i === 0 ? "bg-cream-deep text-orange" : "text-brand"
-                  } hover:bg-cream-deep`}
-                >
-                  {link.label}
-                </a>
-              ))}
+              {navLinks.map((link, i) => {
+                const external = /^https?:\/\//i.test(link.href);
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target={external ? "_blank" : undefined}
+                    rel={external ? "noopener noreferrer" : undefined}
+                    onClick={() => setOpen(false)}
+                    className={`rounded-xl px-4 py-3 text-sm font-semibold uppercase tracking-[0.14em] ${
+                      i === 0 ? "bg-cream-deep text-orange" : "text-brand"
+                    } hover:bg-cream-deep`}
+                  >
+                    {link.label}
+                  </a>
+                );
+              })}
               <Button
                 href={externalLinks.orderNow}
                 variant="primary"
