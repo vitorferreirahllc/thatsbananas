@@ -24,7 +24,7 @@ export default function Logo({ tone = "dark", className = "" }: LogoProps) {
         width={400}
         height={283}
         priority
-        className={`h-16 w-auto sm:h-20 ${
+        className={`h-20 w-auto sm:h-28 lg:h-32 ${
           tone === "light" ? "brightness-0 invert" : ""
         }`}
       />
