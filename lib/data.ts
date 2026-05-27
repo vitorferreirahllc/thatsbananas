@@ -7,7 +7,7 @@ export const navLinks: NavLink[] = [
   { label: "Home", href: "#home" },
   { label: "About Us", href: "#about" },
   { label: "Menu", href: "#menu" },
-  { label: "Catering", href: "https://thatsbananas.my.canva.site/contact" },
+  { label: "Catering", href: "https://thatsbananas.my.canva.site/catering" },
   { label: "Locations", href: "#locations" },
   { label: "Contact", href: "#contact" },
 ];
@@ -82,7 +82,7 @@ export const footerColumns: { title: string; links: NavLink[] }[] = [
     links: [
       {
         label: "Catering",
-        href: "https://thatsbananas.my.canva.site/contact",
+        href: "https://thatsbananas.my.canva.site/catering",
       },
       { label: "Locations", href: "#locations" },
       { label: "Contact", href: "#contact" },
@@ -94,5 +94,5 @@ export const footerColumns: { title: string; links: NavLink[] }[] = [
 export const externalLinks = {
   orderNow: "https://beacons.ai/thatsbananas",
   menu: "https://beacons.ai/thatsbananas",
-  catering: "https://thatsbananas.my.canva.site/contact",
+  catering: "https://thatsbananas.my.canva.site/catering",
 };
